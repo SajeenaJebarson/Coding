@@ -13,9 +13,9 @@ static String censor(String text,
     String result = "";
  
     
-    String stars = "";
+    String hash = "";
     for (int i = 0; i < word.length(); i++)
-        stars += '#';
+        hash += '#';
  
     
     int index = 0;
@@ -24,7 +24,7 @@ static String censor(String text,
         if (i.compareTo(word) == 0)
  
             
-            word_list[index] = stars;
+            word_list[index] = hash;
         index++;
     }
  
@@ -39,7 +39,7 @@ static String censor(String text,
 public static void main(String[] args)
 {
     String extract = "The apple is a pome (fleshy) fruit, "+
-                     "in which the ripened ovary and surrounding tissue both become fleshy and edible. " +
+                     "apple are usually roundish " +
                      "The apple flower of most varieties requires cross-pollination for fertilization. ";
     String cen = "apple";
     System.out.println(censor(extract, cen));
